@@ -1,0 +1,7 @@
+#*#
+*~
+a.out
+*.o
+CMakeLists.txt
+cmake-build-debug/
+trains

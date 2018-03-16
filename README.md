@@ -37,7 +37,11 @@ You shouldn't have to modify the last 3, but it is possible if you want to.
 
 #### _The program keeps rambling about a semaphore / shared memory segment / message queue already created_
 
-**If you have modified the code**, then the likeliest cause is that you have forgotten to remove an IPC.
+This means that the path trains was given is already under use by one or several IPC(s). There may be several causes:
+- The path is used as a key by a different program. Simply select another.
+- If you have not modified the code and the statement above is false, then an error occurred while creating one of the IPC. during a previous launch of trains. Look below to see what you can do.
+- If you have modified the code and the first statement is false, the second may still be true. Or, you have modified the handling of IPCs and forgotten to remove one. Look below to see what you can do.
+
 You can see your current IPCs with the shell command
 ```sh
 ipcs

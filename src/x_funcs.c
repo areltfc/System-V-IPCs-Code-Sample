@@ -1,12 +1,13 @@
 /*
 ** EPITECH PROJECT, 2018
-** lemipc
+** Sys V IPCs
 ** File description:
 ** Created by arthur,
 */
 
 #include <sys/sem.h>
 #include <sys/shm.h>
+#include <sys/msg.h>
 #include <stdlib.h>
 #include <errno.h>
 #include <string.h>
@@ -77,4 +78,21 @@ void *xshmat(int shmid, const void *shmaddr, int shmflg)
 		fprintf(stderr, "shmat: %s\n", strerror(errno));
 		exit(84);
 	}
+}
+
+/*
+ *	Security wrap for msgget(). Exit program if something bad occurred,
+ *	and print why.
+ */
+
+int xmsgget(key_t key, int msgflg)
+{
+	int msg_id;
+
+	msg_id = msgget(key, msgflg);
+	if (msg_id == -1) {
+		fprintf(stderr, "shmget: %s\n", strerror(errno));
+		exit(84);
+	}
+	return (msg_id);
 }

@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2018
-** lemipc
+** Sys V IPCs
 ** File description:
 ** Created by arthur,
 */
@@ -9,7 +9,7 @@
 #include <signal.h>
 #include <wait.h>
 
-#include "ipcs_tests.h"
+#include "ipcs_defines.h"
 
 /*
  *	Wait for all of the processes.

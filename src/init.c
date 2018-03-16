@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2018
-** lemipc
+** Sys V IPCs
 ** File description:
 ** Created by arthur,
 */
@@ -10,7 +10,8 @@
 #include <sys/shm.h>
 #include <string.h>
 
-#include "ipcs_tests.h"
+#include "ipcs_defines.h"
+#include "ipcs_funcs.h"
 
 /*
  *	Setup a single railroad, based on the parameters in ipcs_tests.h
